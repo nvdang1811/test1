@@ -1,0 +1,15 @@
+import random
+
+A = ['G0001', 'G0002', 'G0003', 'G0004', 'G0005', 'G0006', 'G0007', 'G0008']
+B = ['GE0001', 'GE0002', 'GE0003', 'GE0004']
+
+result = []
+
+for a in A:
+    for i in range(random.randint(1, 4)):
+        b = random.choice(B)
+        while (a, b) in result:
+            b = random.choice(B)
+        result.append((a, b))
+
+print(result)
